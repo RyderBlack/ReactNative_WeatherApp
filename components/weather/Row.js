@@ -13,18 +13,17 @@ export default class WeatherRow extends React.Component {
     }
 
     icon(size = 70) {
-        const type = this.props.day.weather[0].main.toLowerCase()
-        let image
+        const type = this.props.day.weather[0].main.toLowerCase();
+        let image;
         switch (type) {
             case 'cloud' :
-            image = require('./icons/cloudy.png')
+            image = require('./icons/cloudy.png');
             break;
             case 'rain' :
-            image = require('./icons/rain.png')
+            image = require('./icons/rain.png');
             break;
-            case 'sun':
-            image = require('./icons/sun.png')
-            break;
+            default:
+            image = require('./icons/sun.png');
         }
 
         return <Image source={image} style={{width: size, height: size}} />
