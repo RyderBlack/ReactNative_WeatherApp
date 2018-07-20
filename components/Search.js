@@ -3,18 +3,10 @@ import {View, TextInput, StyleSheet, ImageBackground} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { Button } from 'nachos-ui';
 import List from './List';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 class Search extends React.Component {
-    
-    static navigationOptions = {
-        tabBarIcon: () => {
-            return <Icon size={32} color="white" name="home" />
-        }
-        
-    }
-    
+
     constructor (props) {
         super(props)
         this.state = {
@@ -42,12 +34,13 @@ class Search extends React.Component {
                     clearButtonMode={'while-editing'}
                     onChangeText={(text) => this.setCity(text)} />
                     <Button style={{width: 250, backgroundColor: '#F50057' }} textStyle={{fontSize: 16}} onPress={() => this.submit()}>Enter a city</Button>
-                
+               
                 </View>
                 </ImageBackground>
             )
     }
 }
+
 
 const styles = StyleSheet.create({
   homeWall: {
@@ -73,9 +66,10 @@ const styles = StyleSheet.create({
       borderRadius: 3,
       color: '#f1f1f1'
   }
+
 });
 
-const ModalNavigator = createStackNavigator({
+const ModalStack = createStackNavigator({
     Search: {
         screen: Search
     },
@@ -84,4 +78,4 @@ const ModalNavigator = createStackNavigator({
     }
 });
 
-export default ModalNavigator;
+export default ModalStack;

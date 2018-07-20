@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ActivityIndicator, ListView, Image} from 'react-native';
+import {ActivityIndicator, ListView, Image} from 'react-native';
 import axios from 'axios';
 import WeatherRow from './weather/Row';
 
@@ -7,7 +7,7 @@ export default class List extends React.Component {
     
     static navigationOptions = ({navigation}) => {
        return {
-           title: `Météo / ${navigation.state.params.city}`,
+           title: `Weather of ${navigation.state.params.city}`,
            tabBarIcon: () => {
             return <Image source={require('./icons/search.png')} />
            }
@@ -42,7 +42,7 @@ export default class List extends React.Component {
             return (
                 <ListView
                     dataSource={ds.cloneWithRows(this.state.report.list)}
-                    renderRow={(rowData,j,k) => <WeatherRow day={rowData} index={parseInt(k, 10)}/>}
+                    renderRow={(rowData,k) => <WeatherRow day={rowData} index={parseInt(k, 10)}/>}
                 />
             )
         }

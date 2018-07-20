@@ -3,10 +3,18 @@ import { StyleSheet, View } from 'react-native';
 import About from './components/About';
 import Search from './components/Search';
 import { createBottomTabNavigator} from 'react-navigation';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Tabs = createBottomTabNavigator({
-  Search: { screen: Search },
+  Search: { 
+    screen: Search,
+    navigationOptions: {
+      tabBarLabel: 'Home',
+      tabBarIcon: () => (
+        <Icon size={32} color="white" name="search" />
+      ),
+    },
+  },
   About: { screen: About }
 },{
   tabBarOptions: {
@@ -19,6 +27,7 @@ const Tabs = createBottomTabNavigator({
 })
 
 export default class App extends React.Component {
+  
   render() {
     return (
       <View style={styles.viewTabs}>
