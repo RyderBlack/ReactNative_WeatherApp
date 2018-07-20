@@ -13,9 +13,9 @@ export default class About extends React.Component {
     render() {
             return (
                 <View style={styles.viewabout}>
-                    <Text style={styles.aboutTitle}>A propos de React Native Weather App :</Text>
+                    <Text style={styles.aboutTitle}>About my React Native Weather App :</Text>
                     <Text style={styles.aboutText}>Bacon ipsum dolor amet leberkas doner filet mignon beef, pork belly biltong pork hamburger t-bone picanha meatball shank short ribs porchetta kielbasa. Rump shoulder tongue, short loin chicken strip steak frankfurter flank. Kevin pork bacon jowl turducken. Short loin bresaola flank swine, cow alcatra ribeye andouille doner pastrami tail ham hock filet mignon pork loin. Ground round hamburger chicken, ribeye pig burgdoggen corned beef filet mignon flank cow ham hock alcatra tongue short loin.</Text>
-                     <Text style={styles.aboutCredits}>Made by Ryderblack</Text>
+                     <Text style={styles.aboutCredits}>Made by Ryhad Inc.</Text>
                 </View>
             )
     }

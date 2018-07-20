@@ -2,15 +2,13 @@ import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import moment from 'moment';
 import 'moment/locale/fr';
+import PropTypes from 'prop-types';
 
 moment.locale('fr');
 
 export default class WeatherRow extends React.Component {
 
-    static propTypes = {
-        day: React.PropTypes.object,
-        index: React.PropTypes.number
-    }
+    
 
     icon(size = 70) {
         const type = this.props.day.weather[0].main.toLowerCase();
@@ -69,6 +67,7 @@ export default class WeatherRow extends React.Component {
     }
 }
 
+
 const styles = StyleSheet.create({
   white: {
     color: "#FFF",
@@ -112,3 +111,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   }
 });
+
+
+WeatherRow.propTypes = {
+    day: PropTypes.object,
+    index: PropTypes.number
+}

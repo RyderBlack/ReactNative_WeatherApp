@@ -1,20 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import About from './components/About';
 import Search from './components/Search';
-import { TabNavigator} from 'react-navigation';
+import { createBottomTabNavigator} from 'react-navigation';
 
 
-const Tabs = TabNavigator({
+const Tabs = createBottomTabNavigator({
   Search: { screen: Search },
   About: { screen: About }
 },{
-
-  swipeEnabled: true,
   tabBarOptions: {
     activeBackgroundColor: '#F9A825',
     showIcon: true,
-    showLabel: false,
     style: {
       backgroundColor: '#00B0FF',
     }
@@ -25,7 +22,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.viewTabs}>
-        <Tabs style={styles.tabsY}/>
+        <Tabs style={styles.tabsY} title="about me"/>
       </View>
     );
   }
