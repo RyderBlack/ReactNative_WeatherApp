@@ -1,5 +1,5 @@
 <p align="center">
-<p align="center">It's a motivational quotes generator, made with ReactNative, react-navigation and some other things, check out the package.json for more details.</p>
+<p align="center">A weather app using ReactNative and OpenWeather API ( ✚ react-navigation and nachosUI 🌮)</p>
 
 <p align="center"><strong>[HOME]</strong></p>
 <img align="center" src="./screenshots/home.png" width="900" />
